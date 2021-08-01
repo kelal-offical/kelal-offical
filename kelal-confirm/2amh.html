@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <p >  <a href="2index.html" class="scrollto">eng</a>
+            <a href="2amh.html" class="scrollto">አማርኛ</a> </p>      
+        <h1>ክፍያዎን ያረጋግጡ</h1>
+        <p>ጠቅላላ ክፍያ =<strong>299 ብር</strong> <br>
+            ትዕዛዝዎን ለመጀመር የመጀመሪያ ክፍያ =<strong>25 ብር</strong> 
+        </p>
+
+        <h1> የክፍያ ምርጫ </h1>
+        <p>cbe interest free banking <strong><br>abdulsemed muhamed suleyman <br> account NO. 1000260678322</strong></p>
+        <p>telebirr<strong><br>NO.0953385047</strong></p>
+
+        <p>ቢያንስ የመጀመሪያውን ክፍያ መክፈል አለብዎት።
+            በ cbe ከከፈሉ የክፍያ ደረሰኝ ምስል ይላኩ።
+            በቴሌቢር ከከፈሉ screenshot of message ይላኩ</p>
+            <form  method="post" role="form" class="contactForm" autocomplete="off" name="google-sheet" >
+                <div class="first-row">
+                    <div class="owner">
+                        <h3>Id</h3>
+                        <div class="input-field">
+                            <input type="number" name="number" class="form-control" id="name" placeholder="Your Id" data-rule="minlen:5" data-msg="Please enter valid number" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="">
+                        
+                        <div class="input-field">
+                            <input type="hidden" value="2" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+        
+        
+                        </div>
+                    </div>
+                </div>
+                <p><br></p>
+                <div class="text-center"><button type="submit" title="Send Message">send image/screenshot</button></div>
+                <p><br></p>
+               
+        
+            </form>
+       
+  
+    </div>
+
+    <script type="text/javascript">
+
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby02OHOrRCPeG7co7pc9JysN63hJZeK6mrm0OI89fcKe90kBkbcN-OVNjesH6qENOIQ/exec'
+              const form = document.forms['google-sheet']
+            
+              form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                  .then(response => alert(window.open('https://t.me/Kelal_officiall'),'top'))
+                  .catch(error => console.error('Error!', error.message))
+              })
+    </script>
+</body>
+</html>
